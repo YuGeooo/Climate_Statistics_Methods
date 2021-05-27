@@ -9,19 +9,19 @@ rm(list = ls())
 }
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  ÑÕÉ«°å£ºRcolorBrewer ³ÌÐò°ü  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  é¢œè‰²æ¿ï¼šRcolorBrewer ç¨‹åºåŒ…  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
-display.brewer.all()                                       #ÌáÈ¡ÑÕÉ«Ìõ
+display.brewer.all()                                       #æå–é¢œè‰²æ¡
 cols <- brewer.pal(n = 11, name = 'RdYlGn')
-pie(rep(1, 11), col = cols, labels = '', border = NA)      #ÖÆ×÷ÈÎÒâÊýÁ¿µÄÑÕÉ«Ìõ
+pie(rep(1, 11), col = cols, labels = '', border = NA)      #åˆ¶ä½œä»»æ„æ•°é‡çš„é¢œè‰²æ¡
 
 my.colorbar <- colorRampPalette(colors = cols)             # 'my.colorbar' is a function
 cols2 <- my.colorbar(1000)
 pie(rep(1,1000), cols = cols2, labels = '', border = NA)
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  ¼ÆÃ¿ÄêÖÐÓê¡¢´óÓê¡¢´ó±©ÓêµÄÌìÊý  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  è®¡æ¯å¹´ä¸­é›¨ã€å¤§é›¨ã€å¤§æš´é›¨çš„å¤©æ•°  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
 rm(list = ls())
@@ -31,7 +31,7 @@ rm(list = ls())
   prcp <- read.csv(file = path, header = T, stringsAsFactors = F) 
   year <- str_sub(string = prcp$date, start = 1, end = 4)
   year <- as.numeric(year)
-  year.unique <- unique(year)[-1]                            #È¥µôÊý¾Ý²»ÍêÕûµÄÒ»Äê
+  year.unique <- unique(year)[-1]                            #åŽ»æŽ‰æ•°æ®ä¸å®Œæ•´çš„ä¸€å¹´
 }
 
 {
@@ -46,10 +46,10 @@ rm(list = ls())
 counts <- t(counts)
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  ÌõÐÎÍ¼  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  æ¡å½¢å›¾  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
-#µ¥±äÁ¿£ºÇ°10ÄêÖÐÓêÌìÊýÌõÐÎÍ¼
+#å•å˜é‡ï¼šå‰10å¹´ä¸­é›¨å¤©æ•°æ¡å½¢å›¾
 {
   storm <- data.frame(year = year.unique, counts)
   
@@ -58,7 +58,7 @@ counts <- t(counts)
              colour = brewer.pal(9,'Set1')[1], lwd = 1.5)
 }
 
-#Ë«±äÁ¿£ºÍ¬Ê±»æÖÆÖÐÓêºÍ´óÓêÌìÊýÌõÐÎÍ¼
+#åŒå˜é‡ï¼šåŒæ—¶ç»˜åˆ¶ä¸­é›¨å’Œå¤§é›¨å¤©æ•°æ¡å½¢å›¾
 {
   storm2 <- data.frame(year = rep(x = storm$year[1:10], times = 2),
                        counts = c(storm$moderate[1:10], storm$big[1:10]),
@@ -70,14 +70,14 @@ counts <- t(counts)
 }
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  ÕÛÏßÍ¼  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  æŠ˜çº¿å›¾  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
-#µ¥±äÁ¿£º»æÖÆÖÐÓê1955-2018ÄêÄêÈÕÊý±ä»¯ÕÛÏßÍ¼
+#å•å˜é‡ï¼šç»˜åˆ¶ä¸­é›¨1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–æŠ˜çº¿å›¾
 ggplot(data = storm, mapping = aes(x = year, y = moderate))+
   geom_line() + geom_point()
 
-#Ë«±äÁ¿£ºÍ¬Ê±»æÖÆÖÐÓêºÍ´óÓê1955-2018ÄêÄêÈÕÊý±ä»¯ÕÛÏßÍ¼
+#åŒå˜é‡ï¼šåŒæ—¶ç»˜åˆ¶ä¸­é›¨å’Œå¤§é›¨1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–æŠ˜çº¿å›¾
 {
   storm3 <- gather(data = storm[,1:3], key = 'group', value = 'counts', -year)
   
@@ -86,18 +86,18 @@ ggplot(data = storm, mapping = aes(x = year, y = moderate))+
 }
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  Ãæ»ýÍ¼  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  é¢ç§¯å›¾  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
-#µ¥±äÁ¿£ºÍ¬Ê±»æÖÆÖÐÓê1955-2018ÄêÄêÈÕÊý±ä»¯
+#å•å˜é‡ï¼šåŒæ—¶ç»˜åˆ¶ä¸­é›¨1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–
 ggplot(data = storm, mapping = aes(x=year, y = moderate))+
   geom_area(color = 'blue', fill = 'red', alpha = 0.2)
 
-#¶à±äÁ¿£ºÍ¬Ê±»æÖÆÈýÖÖÀàÐÍ1955-2018ÄêÄêÈÕÊý±ä»¯
+#å¤šå˜é‡ï¼šåŒæ—¶ç»˜åˆ¶ä¸‰ç§ç±»åž‹1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–
 {
   storm4 <- gather(data = storm, key = 'group', value = 'counts', -year)
   storm4$group <- factor(storm4$group, ordered = T, 
-                         levels = c('moderate', 'big', 'heavy', 'storm'))        #ÓÐÐòÒò×Ó
+                         levels = c('moderate', 'big', 'heavy', 'storm'))        #æœ‰åºå› å­
   
   ggplot(data = storm4, mapping = aes(x = year, y = counts, fill = group))+
     geom_area(color = 'black', size = 0., alpha = 0.4)+
@@ -105,28 +105,28 @@ ggplot(data = storm, mapping = aes(x=year, y = moderate))+
 }
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  ÏäÐÎÍ¼  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  ç®±å½¢å›¾  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
-#Í¬Ê±»æÖÆËÄÖÖÀàÐÍ1955-2018ÄêÄêÈÕÊý±ä»¯
+#åŒæ—¶ç»˜åˆ¶å››ç§ç±»åž‹1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–
 ggplot(data = storm4, mapping = aes(x = group, y = counts))+
   geom_boxplot(outlier.size = 1.5, outlier.shape = 21, notch = T)+
   stat_summary(fun = 'mean', geom = 'point', shape = 17, size = 3)
 
 
-#¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª  É¢µãÍ¼  ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª#
+#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  æ•£ç‚¹å›¾  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”#
 
 
-#µ¥±äÁ¿£ºÍ¬Ê±»æÖÆÖÐÓê1955-2018ÄêÄêÈÕÊý±ä»¯
+#å•å˜é‡ï¼šåŒæ—¶ç»˜åˆ¶ä¸­é›¨1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–
 ggplot(data = storm4 , mapping = aes(x = year, y = counts))+
   geom_point()
 
-#¶à±äÁ¿£ºÍ¬Ê±»æÖÆÈýÖÖÀàÐÍ1955-2018ÄêÄêÈÕÊý±ä»¯
+#å¤šå˜é‡ï¼šåŒæ—¶ç»˜åˆ¶ä¸‰ç§ç±»åž‹1955-2018å¹´å¹´æ—¥æ•°å˜åŒ–
 ggplot(data = storm4, mapping = aes(x = year, y = counts,
                                     shape = group, color = group))+
   geom_point() + scale_color_brewer(palette = 'Set1')
 
-#ÒÀ¾ÝÊôÐÔ½øÐÐ±ä»¯
+#ä¾æ®å±žæ€§è¿›è¡Œå˜åŒ–
 {
   ggplot(data = storm, mapping = aes(x = year, y = moderate, color = year))+
     geom_point() + scale_color_gradient(low = 'red', high = 'blue', breaks = seq(1951, 2018, 10))
@@ -135,7 +135,7 @@ ggplot(data = storm4, mapping = aes(x = year, y = counts,
     geom_point() + scale_size_continuous(range = c(1, 10), breaks = seq(1951, 2018, 10))
 }
 
-#ÏßÐÔÄâºÏ
+#çº¿æ€§æ‹Ÿåˆ
 {
   p <- ggplot(data = storm, mapping = aes(x = year, y = moderate))
   p <- p + geom_point()
@@ -145,7 +145,7 @@ ggplot(data = storm4, mapping = aes(x = year, y = counts,
   p2
 }
 
-#·ÇÏßÐÔÄâºÏ
+#éžçº¿æ€§æ‹Ÿåˆ
 {
   p <- ggplot(data = storm, mapping = aes(x = year, y = moderate))
   p <- p + geom_point()
@@ -155,7 +155,7 @@ ggplot(data = storm4, mapping = aes(x = year, y = counts,
   p2
 }
 
-#¶à±äÁ¿ÏßÐÔÄâºÏºÍ·ÇÏßÐÔÄâºÏ
+#å¤šå˜é‡çº¿æ€§æ‹Ÿåˆå’Œéžçº¿æ€§æ‹Ÿåˆ
 {
   p <- ggplot(data = storm4, mapping = aes(x = year, y = counts, color = group))
   p <- p + geom_point()
@@ -166,7 +166,7 @@ ggplot(data = storm4, mapping = aes(x = year, y = counts,
   p2
 }
 
-#¶à±äÁ¿·ÖÃæÕ¹Ê¾
+#å¤šå˜é‡åˆ†é¢å±•ç¤º
 {
   p <- ggplot(data = storm4, mapping = aes(x = year, y = counts))
   p <- p + geom_point()

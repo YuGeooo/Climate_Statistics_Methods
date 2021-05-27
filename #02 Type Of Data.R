@@ -1,36 +1,36 @@
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ¾ØÕó(Matrix)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  çŸ©é˜µ(Matrix)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
-rm(list = ls())#Çå³ı²ĞÁô±äÁ¿
+rm(list = ls())#æ¸…é™¤æ®‹ç•™å˜é‡
 
 date <- c('Sun', 'Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat')
 wuhan <- c(21, 18, 16, 13, 15, 22, 21)
 beijing <- c(22, 17, 16, 19, 25, 28, 28)
 nanjing <- c(21, 19, 17, 16, 18, 22, 24)
-temp <- matrix(data = c(wuhan, beijing, nanjing), ncol = 3, byrow = F) #byrow¿ØÖÆºáĞ´»¹ÊÇÊúĞ´
-colnames(temp) <- c('wuhan', 'beijing', 'nanjing') #ĞĞÃû
-rownames(temp) <- date #ÁĞÃû
+temp <- matrix(data = c(wuhan, beijing, nanjing), ncol = 3, byrow = F) #byrowæ§åˆ¶æ¨ªå†™è¿˜æ˜¯ç«–å†™
+colnames(temp) <- c('wuhan', 'beijing', 'nanjing') #è¡Œå
+rownames(temp) <- date #åˆ—å
 temp
-ncol(temp) #ĞĞÊı
-nrow(temp) #ÁĞÊı
+ncol(temp) #è¡Œæ•°
+nrow(temp) #åˆ—æ•°
 temp[2,2]
 temp[1,]
 temp[-2, -1]
-temp['Sun',] #µ÷È¡ĞĞÊı¾İ
-temp[,'wuhan'] #µ÷È¡ÁĞÊı¾İ
+temp['Sun',] #è°ƒå–è¡Œæ•°æ®
+temp[,'wuhan'] #è°ƒå–åˆ—æ•°æ®
 
-#¾ØÕóÅÅĞò
+#çŸ©é˜µæ’åº
 order.wuhan <- order(x = temp[,'wuhan'],decreasing = F)
 temp[order.wuhan,]
 
-#¾ØÕóºÏ²¢
+#çŸ©é˜µåˆå¹¶
 temp2 <- temp
 temp3 <- rbind(temp, temp2)
 temp4 <- cbind(temp, temp2)
 
-#¾ØÕóµÄÔËËã
+#çŸ©é˜µçš„è¿ç®—
 rowSums(x = temp)
 rowMeans(x = temp)
 colSums(x = temp)
@@ -39,11 +39,11 @@ colMeans(x = temp)
 A <- matrix(data = c(1,2,3,2,2,5,3,2,1), ncol = 3, byrow = T)
 b <- c(1,2,3)
 solve(a = A, b = b)
-diag(x = 3)#¶Ô½Ç¾ØÕó
-solve(a = A, b = diag(3))#ÇóÄæ¾ØÕó
+diag(x = 3)#å¯¹è§’çŸ©é˜µ
+solve(a = A, b = diag(3))#æ±‚é€†çŸ©é˜µ
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Êı×é(Array)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  æ•°ç»„(Array)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
 rm(list = ls())
@@ -59,7 +59,7 @@ library(abind)
 arr2 <- abind(arr, mat, along = 3)# ?
 arr2
 
-#¼ÓÔØÍ¼Æ¬£¬Í¼Æ¬µÄ±¾ÖÊÊÇÊı×é
+#åŠ è½½å›¾ç‰‡ï¼Œå›¾ç‰‡çš„æœ¬è´¨æ˜¯æ•°ç»„
 library(imager)
 file <- paste('C:/Users/GYQ/Desktop/MobileFile/', 'landscape.jpg',sep = '')
 picture <- load.image(file = file)
@@ -71,13 +71,13 @@ picture[180:400, 1:60,,3] <- 0.8
 plot(picture)
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Êı¾İ¿ò(Frame)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  æ•°æ®æ¡†(Frame)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
 rm(list = ls())
 
 date <- seq(from = as.Date('2020-04-08'), to = as.Date('2020-04-24'), by = 1)
-prep <- factor(x = c('´óÓê','ÖĞÓê','ÖĞÓê','Òõ','¶àÔÆ','Òõ','¶àÔÆ'))
+prep <- factor(x = c('å¤§é›¨','ä¸­é›¨','ä¸­é›¨','é˜´','å¤šäº‘','é˜´','å¤šäº‘'))
 minT <- c(10, 11, 10, 11, 11, 11, 11)
 maxT <- c(18, 21, 17, 20, 20, 20, 21)
 weather <- data.frame(date = date, prep = prep, minT = minT, maxT = maxT)
@@ -86,7 +86,7 @@ wind <- c('NE', 'N', 'NE', 'NE', 'SW', 'SW', 'SW')
 weather2 <- cbind(weather, wind)
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ÁĞ±í(List)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  åˆ—è¡¨(List)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
 rm(list = ls())
@@ -94,10 +94,10 @@ rm(list = ls())
 x1 <- 1:10
 x2 <- letters[1:26]
 x3 <- c(T, T, F, F, T)
-x4 <- factor(x = 1:20)#ÊıÖµĞÍÒò×Ó
-x5 <- matrix(data = 1 : 10, nrow = 2, ncol = 5)#¾ØÕó
-x6 <- array(data = 1:24, dim = c(2, 3, 4))#Êı×é
-x7 <- data.frame(x1 = 1:10, x2 = letters[1 : 10], stringsAsFactors = F)#Êı¾İ¿ò
+x4 <- factor(x = 1:20)#æ•°å€¼å‹å› å­
+x5 <- matrix(data = 1 : 10, nrow = 2, ncol = 5)#çŸ©é˜µ
+x6 <- array(data = 1:24, dim = c(2, 3, 4))#æ•°ç»„
+x7 <- data.frame(x1 = 1:10, x2 = letters[1 : 10], stringsAsFactors = F)#æ•°æ®æ¡†
 lb <-list(x1 = x1, x2 = x2, x3 = x3, x4 = x4, x5 = x5, x6 = x6, x7 = x7)
 
 lb$x1

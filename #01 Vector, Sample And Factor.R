@@ -1,29 +1,29 @@
-# ´´½¨ÏòÁ¿ #
+# åˆ›å»ºå‘é‡ #
 c <- c('ok', 'ahhh', 'HelloWorld')
 b <- c(T, F, F, T, T)
 x2 <- c(1.4, 2.8, T, T, F)
 x3 <- c(T, F, T, x2)
 
-#´´½¨ÏòÁ¿
+#åˆ›å»ºå‘é‡
 num1 <- vector(mode = "numeric", length = 6)
 char <- vector(mode = "character", length = 6)
 logic <- vector(mode = "logical", length = 6)
 
-num1 <- seq(from = 1, to = 10, by = 2) #µÈ²îÊıÁĞ µİÔö
-num2 <- seq(from = 10, to = 1, by = -2) #µÈ²îÊıÁĞ µİ¼õ
-num3 <- seq(from = 1, to = 10, length.out = 5) #Æ½¾ù
+num1 <- seq(from = 1, to = 10, by = 2) #ç­‰å·®æ•°åˆ— é€’å¢
+num2 <- seq(from = 10, to = 1, by = -2) #ç­‰å·®æ•°åˆ— é€’å‡
+num3 <- seq(from = 1, to = 10, length.out = 5) #å¹³å‡
 num4 <- seq_len(length.out = 10)
 
-#¶àÓÃÀ¨ºÅ£¬·ÀÖ¹»ìÂÒ
+#å¤šç”¨æ‹¬å·ï¼Œé˜²æ­¢æ··ä¹±
 1 : 10
 1 : 10 - 1
 1 : (10 - 1)
 
-#Ëæ»ú³éÑù
-sam1 <- sample(x = 1 : 10, size = 5, replace = F) #²»·Å»Ø³éÑù
-sam2 <- sample(x = 1 : 10, size = 6, replace = T)  #·Å»Ø³éÑù
+#éšæœºæŠ½æ ·
+sam1 <- sample(x = 1 : 10, size = 5, replace = F) #ä¸æ”¾å›æŠ½æ ·
+sam2 <- sample(x = 1 : 10, size = 6, replace = T)  #æ”¾å›æŠ½æ ·
 
-#¹Ì¶¨Ëæ»ú³éÑùµÄ½á¹û
+#å›ºå®šéšæœºæŠ½æ ·çš„ç»“æœ
 set.seed(123)
 sam3 <- sample(x = 1 : 5, size = 7, replace = T)
 
@@ -36,18 +36,18 @@ ids <- which(num1 <4)
 num1[ids]
 num1[num1 < 7]
 
-#ÏòÁ¿ÓëÏÂ±ê¶ÔÓ¦
+#å‘é‡ä¸ä¸‹æ ‡å¯¹åº”
 letters <- c("a", "b", "c", "d", "e")
 names(num1) <- letters
 num1[c("c", "e")]
 
-sort(x = sam1, decreasing = F) #·µ»ØÅÅĞò½á¹û
-sort(x = sam1, decreasing = T) #´Ó´óµ½Ğ¡ÅÅĞò£¬·µ»ØÅÅĞò½á¹û
-order(x = sam1, decreasing = F) #´ÓĞ¡µ½´óÅÅĞò£¬·µ»ØÅÅĞò½á¹ûµÄÏÂ±ê
+sort(x = sam1, decreasing = F) #è¿”å›æ’åºç»“æœ
+sort(x = sam1, decreasing = T) #ä»å¤§åˆ°å°æ’åºï¼Œè¿”å›æ’åºç»“æœ
+order(x = sam1, decreasing = F) #ä»å°åˆ°å¤§æ’åºï¼Œè¿”å›æ’åºç»“æœçš„ä¸‹æ ‡
 
-rev(num1) #ÏòÁ¿µÄÄæĞòÅÅÁĞ
+rev(num1) #å‘é‡çš„é€†åºæ’åˆ—
 
-#²é¿´ÏòÁ¿µÄ×îºóÒ»¸öÖµ
+#æŸ¥çœ‹å‘é‡çš„æœ€åä¸€ä¸ªå€¼
 num1[length(num1)]
 tail(x = num1, n = 1)
 
@@ -55,13 +55,13 @@ num1 * num2
 num1 + num2
 num1 - num2
 
-#Òò×Ó
+#å› å­
 weather <- c("Rain", "Storm", "Snow", "Rain")
 weather <- factor(x = weather, levels =  c("Snow", "Rain", "Storm"), ordered = T)
 weather
 weather == "Snow"
-nlevels(x = weather) #È¡ÖµË®Æ½µÄ¸öÊı
-levels(x = weather) #È¡ÖµµÄË®Æ½
+nlevels(x = weather) #å–å€¼æ°´å¹³çš„ä¸ªæ•°
+levels(x = weather) #å–å€¼çš„æ°´å¹³
 weather[1] > weather[2]
 
 as.numeric(x = weather)
@@ -72,10 +72,10 @@ levels(x = num.factor)
 as.numeric(x = num.factor)
 num.factor
 
-#½µÓêµÈ¼¶·ÖÀà
+#é™é›¨ç­‰çº§åˆ†ç±»
 prcp <- c(5.6, 280, 150, 20, 45, 86)
 types1 <- cut(x = prcp, breaks = c(0, 9.9, 24.9, 49.9, 99.9, 249.9, 300),
               include.lowest = T, right = F, ordered_result = T,
-              labels = c("Ğ¡Óê", "ÖĞÓê", "´óÓê", "±©Óê", "´ó±©Óê", "ÌØ´ó±©Óê"))
+              labels = c("å°é›¨", "ä¸­é›¨", "å¤§é›¨", "æš´é›¨", "å¤§æš´é›¨", "ç‰¹å¤§æš´é›¨"))
 types1
 
